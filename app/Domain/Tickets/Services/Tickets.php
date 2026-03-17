@@ -2556,7 +2556,7 @@ class Tickets
     public function getLastTicketViewUrl(): mixed
     {
 
-        $url = BASE_URL.'/tickets/showKanban';
+        $url = BASE_URL.'/tickets/showAll?groupBy=milestoneid';
 
         if (session()->exists('lastTicketView') && session('lastTicketView') != '') {
             if (session('lastTicketView') === 'kanban' && session()->exists('lastFilterdTicketKanbanView') && session('lastFilterdTicketKanbanView') != '') {
